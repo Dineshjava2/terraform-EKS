@@ -16,8 +16,5 @@ variable "cluster_name" {
   default = "dine-cluster"
   description = "this is cluster name"
 }
-variable "cidr_blocks" {
-  type = number
-  default = [""10.0.0.0/8","172.16.0.0/12","192.168.0.0/16","]
-}
+
 
