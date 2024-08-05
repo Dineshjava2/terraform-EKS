@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('code checkout') {
+            steps {
+                script {
+                   git branch: 'main', credentialsId: 'git', url: 'https://github.com/Dineshjava2/terraform-EKS'
+                }
+            }
+        }
+    }
+    stages {
+        stage('terraform init') {
+            steps {
+             sh 'terraform init'    
+            }
+        }
+    }
+}
